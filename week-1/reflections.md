@@ -37,3 +37,16 @@ rm - remove a file
 help - explains a built-in command
 
 ### 1.4 Forking and Cloning
+Here are my instructions on how to CREATE a new repo, FORK a repo, and CLONE a repo:
+
+1) Once logged into your GitHub account, go to the top right of the main page and to the left of your profile picture, you'll see a plus sign. Hover the mouse over it and you'll even see it says "Create new." Click the "+" sign and you'll be able to CREATE new a repository within your GitHub account. *Note this is not automatically synced with your local machine.
+
+2) To FORK a repo, you must be on someone else's GitHub profile. The point of "forking" is to get a copy of there repository. This allows you to use the code and play with it while not changing the original repository you forked (copied) it from. Once you're on someone else's GitHub profile and click a repository you want, the right hand side of the web page you'll see the word "Fork" with a symbol that looks like a "Y." You simply click Fork and then choose the profile you're forking the repository to, which would be your own. GitHub will then bring you to your Forked repository in your profile. *Note this is not automatically synced with your local machine.
+
+3) Lastly, CLONING a repo is how you get your repository in GitHub onto your local machine, essentially syncing with GitHub using a URL. First step, you want to make sure you're cloning the repository in the right place on your computer. Using the command line, navigate your way into a specific folder you want to clone a repository into. You'll use commands such as pwd, cd, ls, mkdir, etc. Once you have your location set, go back to GitHub and look for the HTTPS or SSH URL. Mine says HTTPS is recommended. You copy this to your clipboard and then go back to your command line. You type: git clone (and paste the URL). You might be prompted for your GitHub username and password and press enter. You'll see some code run and then you can check using commands to see that the repository is now CLONED where you saved it. You can open this in Sublime to get a better view all of the files and directories.
+
+
+
+You'd fork a repository as opposed to create a new one because a forked repository is code that has already been written. It is something you want to copy and use for your own or look inside and mess with the code. Whereas, creating a new repository contains no written code and is as if you're starting from scratch.
+
+I didn't have much trouble setting up my git and GitHub, once familiar with the commands I felt pretty cool being able to navigate my computer and clone repositories from GitHub. I'm starting to feel like a noob programmer! I learned more about the relationship between git and GitHub and how they are simultaneously used to achieve efficiency.
