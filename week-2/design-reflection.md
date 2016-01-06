@@ -1,7 +1,7 @@
 ## 2.3 Reflection
 
 
-![Site Map](./imgs/SiteMap.jpg =400x200)
+![Site Map](./imgs/SiteMap.jpg)
 
 ###What are the 6 Phases of Web Design?
 
