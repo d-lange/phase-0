@@ -1,0 +1,132 @@
+
+
+body {
+  color : #000080;
+  background-color : #ffffff;
+}
+
+a {
+  color: #800080;
+}
+
+a:visited {
+  color: #FF0000;
+}
+
+.center {
+  display: block;
+  padding-left: 5%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.updated {
+  font-size: 65%;
+}
+
+.heading {
+  text-align: center;
+  display: block;
+  position: relative;
+  font-weight: bold;
+  padding-right: 38%;
+  padding-left: 38%;
+  padding-bottom : 15px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.center {
+  left: 93px;
+}
+.first-letter {
+  font-size : 200%;
+}
+
+.address {
+  font-size: 70%;
+  }
+
+.inc {
+  font-size: 80%;
+}
+
+.official {
+  font-size: 85%;
+}
+
+.geico {
+  display: block;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  display: block;
+}
+
+.free-car {
+  font-size: 65%;
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.comments {
+  font-size: 80%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.copy {
+  font-size: 65%;
+}
+
+.footer {
+  font-weight: bold;
+}
+
+.left {
+  block : inline;
+  float : left;
+}
+
+.right {
+  block : inline;
+  float : right;
+}
+
+.center {
+  text : center;
+}
+
+.geico {
+  line-height: 20px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/*
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+It's important to know that you insert the link in the <head> section of the HTML document. It's also important to know the proper syntax, which is <link rel="stylesheet" type="text/css" href="stylesheet-document.css">.
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+I used <span> tags as well <table> and padding and margin to develop the proper spacing. I found it to be much harder than I thought it was going to be. Re-adjusting the html so that the CSS properly coordinates with the box model and each element was difficult and I'm still finding it tricky.
+
+What CSS did you use to modify the element style (like size, color, etc.)
+
+I used font-size, color, background-color.
+
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+
+I used mostly classed in my HTML. With an ID, an element can only have one ID. A class is much easier to use on mulitple elements and multiple classes on the same element.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+The actual code base did most of it's styling within the HTML itself which isn't a best practice of programming. It's best to keep html for text, and styling for css.
+*/
