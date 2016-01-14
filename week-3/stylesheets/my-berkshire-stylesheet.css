@@ -1,114 +1,3 @@
-
-
-body {
-  color : #000080;
-  background-color : #ffffff;
-}
-
-a {
-  color: #800080;
-}
-
-a:visited {
-  color: #FF0000;
-}
-
-.center {
-  display: block;
-  padding-left: 5%;
-  border-bottom: 1px solid lightgrey;
-}
-
-.updated {
-  font-size: 65%;
-}
-
-.heading {
-  text-align: center;
-  display: block;
-  position: relative;
-  font-weight: bold;
-  padding-right: 38%;
-  padding-left: 38%;
-  padding-bottom : 15px;
-  border-bottom: 1px solid lightgrey;
-}
-
-.center {
-  left: 93px;
-}
-.first-letter {
-  font-size : 200%;
-}
-
-.address {
-  font-size: 70%;
-  }
-
-.inc {
-  font-size: 80%;
-}
-
-.official {
-  font-size: 85%;
-}
-
-.geico {
-  display: block;
-}
-
-img {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  display: block;
-}
-
-.free-car {
-  font-size: 65%;
-  text-align: center;
-  padding-left: 30%;
-  padding-right: 30%;
-  padding-bottom: 10px;
-  border-bottom: 1px solid lightgrey;
-}
-
-.comments {
-  font-size: 80%;
-  padding-bottom: 10px;
-  border-bottom: 1px solid lightgrey;
-}
-
-.copy {
-  font-size: 65%;
-}
-
-.footer {
-  font-weight: bold;
-}
-
-.left {
-  block : inline;
-  float : left;
-}
-
-.right {
-  block : inline;
-  float : right;
-}
-
-.center {
-  text : center;
-}
-
-.geico {
-  line-height: 20px;
-}
-
-img {
-  vertical-align: middle;
-}
-
 /*
 What is important to know when linking an external file (like a stylesheet) to an HTML file?
 
@@ -130,3 +19,99 @@ When you compared your site to the actual code base, which do you think had clea
 
 The actual code base did most of it's styling within the HTML itself which isn't a best practice of programming. It's best to keep html for text, and styling for css.
 */
+
+a {
+  color:link : #800080;
+}
+
+a:visited {
+  color : #ff0000;
+}
+
+body {
+  color : #000080;
+  background-color : #ffffff;
+}
+
+.address {
+  font-size: 75%;
+}
+
+.articles-links {
+  padding-left: 5%;
+}
+
+.center {
+  text : center;
+}
+
+.city {
+  margin-bottom: -6px;
+}
+
+.comments {
+  font-size: 80%;
+}
+
+.company-name {
+  margin-bottom: -6px;
+}
+
+.copy {
+  font-size: 10px;
+}
+
+.first-letter {
+  font-size : 200%;
+}
+
+.free-car {
+  display: block;
+  font-size: 65%;
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.heading {
+  font-weight : bold;
+  text-align : center;
+  margin-top: 10px;
+  padding-bottom : 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.image {
+  margin-left: 47%;
+}
+
+.inc {
+  font-size: 80%;
+}
+
+.left {
+  block : inline;
+  float : left;
+}
+
+.line {
+  display: block;
+}
+
+.official {
+  font-size: 85%;
+}
+
+.right {
+  block : inline;
+  float : right;
+}
+
+.updated {
+  display : block;
+  font-size: 60%;
+}
+
+.footer{
+  font-weight: bold;
+}
