@@ -24,6 +24,8 @@ puts 365*10*60*24
 
 ###How does Ruby handle addition, subtraction, multiplication, and division of numbers?
 
+Ruby can handle each of these with ease. It works in order of PEMDAS. It's also important to know whether you're working with integers or floats.
+
 ###What is the difference between integers and floats?
 
 Integers are whole numbers with no decimals. Floats are numbers with decimal points.
