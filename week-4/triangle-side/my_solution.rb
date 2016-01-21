@@ -1,8 +1,18 @@
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [with: Michael Wang].
 
 
 # Your Solution Below
 
 def valid_triangle?(a, b, c)
-  # Your code goes here!
+  if a == 0 || b ==0 || c == 0
+    return false
+  elsif !(a + b > c) || !(a + c > b) | !(b + c > a)
+    return false
+  elsif a == b && a == c
+    return true
+  elsif a == b || a == c || b == c
+    return true
+  elsif (a**2 + b**2 == c**2) || (b**2 + c**2 == a**2) || (a**2 + c**2 == b**2)
+    return true
+  end
 end
