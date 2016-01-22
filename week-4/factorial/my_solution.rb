@@ -1,6 +1,6 @@
 # Factorial
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [with: Mike Gwozdek].
 
 # Pseudocode
 # establish the sum to 1 because this is the lowest it should go
