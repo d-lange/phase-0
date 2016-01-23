@@ -1,0 +1,32 @@
+* {
+  font-family: helvetica;
+}
+
+header {
+  border: 1px dashed red;
+}
+
+header h1 {
+  text-align: center;
+}
+
+.column-1 {
+  border: 1px dashed red;
+  width: 49%;
+  float: left;
+  display: block;
+}
+
+.column-2 {
+  border: 1px dashed red;
+  width: 50%;
+  float: left;
+  display: block;
+}
+
+footer {
+  border: 1px dashed red;
+  text-align: center;
+  padding: 2em;
+  clear: both;
+}
