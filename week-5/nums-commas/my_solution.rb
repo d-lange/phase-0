@@ -25,6 +25,7 @@
 # 1. Initial Solution
 def separate_comma(number)
   if number > 999
+    number.to_s
     p number.to_s.split(//).reverse.each_slice(3).map(&:join).reverse.join(',')
   else
     p number.to_s
