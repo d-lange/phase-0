@@ -110,7 +110,7 @@ end
 
 
 
-# Person 4
+# Person 4 - David/Ian
 def my_array_deletion_method!(source, thing_to_delete)
   source.delete_if { |x| x.to_s.include? thing_to_delete }
 end
@@ -153,14 +153,6 @@ end
 # Release 3: Reflect!
 # What did you learn about researching and explaining your research to others?
 #
-#
-#
-#
-
-
-# Release 3: Reflect!
-# What did you learn about researching and explaining your research to others?
-#
-#
+# It took me a while to finally figure out the solution, but using ruby-docs was really helpful in finding the right method to implement a good solution.
 #
 #
