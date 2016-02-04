@@ -42,7 +42,7 @@ class BingoBoard
 
   def call
     @letter = ["B", "I", "N", "G", "O"].sample
-    @number = rand(1..100)
+    @number = rand(1...100)
     p @letter.to_s + @number.to_s
   end
 
