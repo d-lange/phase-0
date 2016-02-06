@@ -76,3 +76,25 @@ p serving_size_calc("cookie", 10)
 p serving_size_calc("THIS IS AN ERROR", 5)
 
 #  Reflection
+
+# What did you learn about making code readable by working on this challenge?
+
+
+    # Looking at the code you could tell it wasn't exactly the cleanest code to execute what we wanted. Using counter variable and iterating through made it easier.
+
+
+# Did you learn any new methods? What did you learn about them?
+
+
+    # I learned about .include? and used it to implement the argument in one line of code.
+
+# What did you learn about accessing data in hashes?
+
+
+    # pay attention to how you identify the key and the value when writing the code.
+
+
+# What concepts were solidified when working through this challenge?
+
+
+    # I think using proper loops and counters to run through information and be able to make an output depending on what my code is telling it to check.
