@@ -1,8 +1,8 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Kenton Lin ].
+# I spent [2.5] hours on this challenge.
 
 # Pseudocode
 
@@ -49,10 +49,16 @@ p validate_card.check_card
 # Refactored Solution
 
 
-
-
-
-
-
-
 # Reflection
+
+# What was the most difficult part of this challenge for you and your pair?
+
+    # Understanding how to iterate through the numbers by every other and then multiplying just those numbers. Our logic was making sense. Putting it into code was really what slowed us down.
+
+# What new methods did you find to help you when you refactored?
+
+    # .inject using (:+) was really convenient in the last step of the validation process.
+
+# What concepts or learnings were you able to solidify in this challenge?
+
+    # Iterating an array was really solidified in this challange.
