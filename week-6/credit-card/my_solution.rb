@@ -1,7 +1,7 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: Kenton Lin ].
+# I worked on this challenge [with: Kenton Lin].
 # I spent [2.5] hours on this challenge.
 
 # Pseudocode
@@ -17,32 +17,36 @@
 # of exactly 16 digits
 
 class CreditCard
- def initialize(number)
-    @number = number.to_s
-    raise ArgumentError.new unless @number.length == 16
+
+  def initialize(num)
+    @num = num.to_s
+    if @num.length != 16
+      raise ArgumentError.new("Please input a number with 16 digits")
+    end
   end
 
-  def check_card
-    @number = @number.split('').map { |num| num.to_i }.reverse!
-    @new_array = []
-    @number.each_with_index do |num, index|
-    @new_array.push(num * 2) unless index % 2 == 0
-    @new_array.push(num) unless index % 2 != 0
+  def check_card()
+
+    number_array = @num.split('')
+    number_array.map! {|num| num.to_i}
+
+
+    (0...number_array.length).step(2).each {|x| number_array[x] = number_array[x] * 2}
+
+   number_array.map! do |x|
+      x.to_s.split('')
     end
 
-    @new_array = @new_array.map { |num| num.to_s }.join.split('').map { |num| num.to_i }
-
-    if @new_array.inject(:+).to_f % 10.0 == 0.0
-      true
-    else
-      false
+    number_array.flatten!.map! do |num|
+      num.to_i
     end
-
+    sum = number_array.inject{|sum, x| sum + x}
+    sum % 10 == 0 ? true : false
   end
 end
 
-validate_card = CreditCard.new(4563960122001999)
-p validate_card.check_card
+card = CreditCard.new(4563960122001999)
+card.check_card
 
 
 
