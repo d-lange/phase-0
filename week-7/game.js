@@ -3,159 +3,103 @@
 // This is a solo challenge
 
 // Your mission description:
-// Overall mission:
-// Goals:
-// Characters:
-// Objects:
-// Functions:
+// Overall mission: Beat the bully in a fight
+// Goals: damage the bully before you lose damage
+// Characters: Nerd, Bully
+// Objects: Nerd(health, win), Bully(health)
+// Functions:attackPunch, attackKick, attackPush, attackSlap
 
 // Pseudocode
-//
-//
-//
-//
-//
+
+// declare a nerd object that has properties of health and win.
+// write function that add methods to nerd to make it be able to attack bully
+// declare a bully object that has health property.
+// After every move, check the health of both bully and nerd.
+// Let user know health of both themselves and bully.
+// Whoever's health gets to 0 first, they win. If the nerd decides not to fight, game over.
 
 // Initial Code
 
 confirm("Are you ready to play my game?");
 
-var user = {
-  name: prompt("What is your name?"),
-  age: prompt("How old are you?")
+var age = prompt("How old are you?");
+
+if(age < 13) {
+    alert("You're allowed to play, but I take no responsibility!");
+}
+else {
+    alert("Awesome! Enjoy playing!");
 }
 
-var computer = {
+console.log("You are a nerd! Looks like it's 3pm and the bully that's been picking on you has challenged you to a fight.");
 
+var userAnswer = prompt("Do you want to fight the bully?")
+
+if (userAnswer === "yes") {
+    alert("Wow, you're brave! People start circling around you and the bully. You take your glasses off and get ready to finally confront your bully!");
+}
+else {
+    alert("Looks like you ran as fast as you could to your friends house and saved yourself another day! Game over!");
 }
 
-// var userGuess = prompt("Try and guess the number I'm thinking of from 0 to 10.");
+var nerd = {
+  health: 100,
+  win: false,
 
-// var computerChoice = Math.floor(Math.random()*10);
+// function that
+attack: function(type_of_attack) {
+  if(type_of_attack === 'punch') {
+    bully.health -= 10;
+    console.log("You've punched the bully and damaged him! His health is now " + bully.health.toString() + ". Keep going!!");
+  }
+  else if(type_of_attack === 'kick') {
+    bully.health -= 20;
+    console.log("You've kicked the bully and hurt his leg! His health is now " + bully.health.toString() + ". Keep going!!");
+  }
+  else if(type_of_attack === 'push') {
+    nerd.health -= 10;
+    console.log("Looks like you've pushed the bully. He laughed in your face and slapped you! Your health is now " + nerd.health.toString() + ".");
+  }
+  else if(type_of_attack === 'slap') {
+    nerd.health -= 20;
+    bully.health -= 10;
+    console.log("You just slapped the bully in the face! His health is now " + bully.health.toString() + ". Unfortunately, he retreated by poking you in the eye! Your health is now " + nerd.health.toString() + ". You got this. Keep going!");
+  }
 
-// var guess = function (num) {
-//     if (userGuess === computerChoice) {
-//       console.log("Wow, great job! You guessed it!");
-//     }
-//     else if (userGuess < computerChoice) {
-//       console.log("A little low, try again.");
-//     }
-//     else if (userGuess > computerChoice) {
-//       console.log("A little high, try again.");
-//     }
-//     else {
-//       console.log("Looks like you didn't get it. The right number was " + computerChoice + ".");
-//     }
-// };
+  // let user know what the health status is during the fight
+  console.log("Currently, your health is at " + nerd.health + " and the bully's health is " + bully.health + ".");
 
-// guess(8);
-  // else if (guess2 === computerChoice) {
-  //   console.log("Nice! You guessed it on the second try!");
-  // }
-  // else if (guess3 === computerChoice) {
-  //   console.log("Nice! You guessed it on the third try!");
-  // }
-  // else if (guess4 === computerChoice) {
-  //   console.log("Nice! You guessed it on the fourth try!");
-  // }
-  // else if (guess5 === computerChoice) {
-  //   console.log("You guessed it on your last try!");
-  // }
-  // else {
-  //   console.log("Looks like I win since you didn't guess the number I was thinking of!");
-  // }
-//};
+  //After every move, check if the nerd or the bully is winning
+  if(nerd.health < bully.health && nerd.health != 0) {
+    console.log("The bully is beating you! Don't give up!");
+  }
+  else if(bully.health < nerd.health && bully.health != 0) {
+    console.log("You're beating the bully. Keep going and you'll win!");
+  }
+  else if(nerd.health <= 0) {
+    console.log("Womp, womp! The bully has beaten you! You run home crying!");
+  }
+  else if(bully.health <= 0) {
+    nerd.win = true;
+    alert("Yay! You've beaten the bully! He's never going to bother you again!");
+  }
 
-
-//Adventure game
-/*confirm("I am ready to play!");
-
-var age = prompt("What's your age");
-
-if(age < 13)
-{
-    console.log("You're allowed to play but I take no responsibility!");
 }
-else
-{
-    console.log("Awesome! Enjoy playing!");
-}
-
-console.log("You are at a Justin Bieber concert, and you hear this lyric 'Lace my shoes off, start racing.'");
-
-console.log("Suddenly, Bieber stops and says, 'Who wants to race me?'");
-
-userAnswer = prompt("Do you want to race Bieber on stage?");
-
-if (userAnswer === "yes")
-{
-    console.log("You and Bieber start racing. It's neck and neck! You win by a shoelace!");
-}
-else
-{
-    console.log("Oh no! Bieber shakes his head and sings 'I set a pace, so I can race without pacing.'");
-}
-
-feedback = prompt("Please rate my game out of 10");
-
-if (feedback > 8)
-{
-    console.log("Thank you! We should race at the next concert!");
-}
-else
-{
-    console.log("I'll keep practicing coding and racing.");
-}*/
-
-// Rock, paper, scissors game
-
-/*var userChoice = prompt("Do you choose rock, paper or scissors?");
-var computerChoice = Math.random();
-if (computerChoice < 0.34) {
-  computerChoice = "rock";
-} else if(computerChoice <= 0.67) {
-  computerChoice = "paper";
-} else {
-  computerChoice = "scissors";
-} console.log("Computer chose: " + computerChoice);
-
-var compare = function (choice1, choice2) {
-    if (choice1 === choice2) {
-        return "The result is a tie!";
-    }
-
-    else if (choice1 === "rock") {
-        if (choice2 === "scissors") {
-            return "You win because you chose rock and rock beats scissors";
-        }
-        else {
-            return "Looks like the computer chose paper, which wins and beats rock";
-        }
-    }
-
-    else if (choice1 === "paper") {
-        if (choice2 === "rock") {
-            return "You win because you chose paper and paper beats rock";
-        }
-        else {
-            return "Looks like the computer chose scissors, which wins and beats paper";
-        }
-    }
-
-    else if (choice1 === "scissors") {
-        if (choice2 === "paper") {
-            return "You win because you chose scissors and scissors beats paper";
-        }
-        else {
-            return "Looks like the computer chose rock, which wins and beats scissors";
-        }
-    }
 };
 
-compare(userChoice, computerChoice);*/
+var bully = {
+  health: 100,
+};
 
-
-
+nerd.attack('punch');
+nerd.attack('push');
+nerd.attack('kick');
+nerd.attack('slap');
+nerd.attack('punch');
+nerd.attack('kick');
+nerd.attack('push')
+nerd.attack('kick');
+nerd.attack('punch');
 
 // Refactored Code
 
@@ -165,11 +109,21 @@ compare(userChoice, computerChoice);*/
 
 
 // Reflection
-//
-//
-//
-//
-//
-//
-//
+
+//What was the most difficult part of this challenge?
+
+  // honestly, just figuring out what kind of game I wanted to make and what I wanted the player to be able to do. Of course the purpose of this challenge is to design a simple game, but it's clear the more you get into it the more you want to make it do more and more things. I guess just making it a seamless experience of a game was the hardest.
+
+// What did you learn about creating objects and functions that interact with one another?
+
+  // I learned that that a function must utilize the objects properties in order to interact with it and modify it.
+
+// Did you learn about any new built-in methods you could use in your refactored solution? If so, what were they and how do they work?
+
+  // I did not, I'm still figuring out how I should refactor this.
+
+// How can you access and manipulate properties of objects?
+
+  // By accessing the object followed by the property, example: nerd.health. nerd is the object and health is a property within the nerd object.
+
 //
