@@ -15,11 +15,80 @@ var scores = [ [80, 70, 70, 100],
                [75, 70, 80, 75],
                [100, 90, 95, 85] ]
 
+// // __________________________________________
+// // Write your code below.
+
+// var gradebook = {
+//   Joseph: {
+//     testScores: scores[0]
+//   },
+//   Susan: {
+//     testScores: scores[1]
+//   },
+//   William: {
+//     testScores: scores[2]
+//   },
+//   Elizabeth: {
+//     testScores: scores[3]
+//   },
+//   addScore: function(name, score) {
+//     if (name === "Joseph"){
+//       scores[0].push(score)
+//       return(gradebook.Joseph);
+//     }
+//     else if (name === "Susan"){
+//       scores[1].push(score)
+//       return(gradebook.Susan);
+//     }
+//     else if (name === "William"){
+//       scores[2].push(score)
+//       return(gradebook.William);
+//     }
+//     else if (name === "Elizabeth"){
+//       scores[3].push(score)
+//       return(gradebook.Elizabeth);
+//     }
+//   },
+//   getAverage: function(name) {
+
+//     // for each student in the gradebook
+//     // if name === gradebook[property]
+//     // run average on student scores
+//      if (name === "Joseph"){
+//       return average(scores[0]);
+//     }
+//     else if (name === "Susan") {
+//       return(average(scores[1]));
+//     }
+//     else if (name === "William") {
+//       return(average(scores[2]));
+//     }
+//     else if (name === "Elizabeth") {
+//       return(average(scores[3]));
+//     }
+//   }
+// }
+
+// function average(array) {
+//   var averageValue = 0;
+//   for (var counter = 0; counter < array.length; counter++) {
+//   averageValue += array[counter];
+//   } // end for
+//   return (averageValue / array.length);
+// }
+
+// gradebook.getAverage("Joseph");
+
+// for(var prop in gradebook) {
+//   console.log(prop)
+// }
+
 // __________________________________________
-// Write your code below.
+// Refactored Solution
+
 var gradebook = {
   Joseph: {
-    testScores: scores[0],
+    testScores: scores[0]
   },
   Susan: {
     testScores: scores[1]
@@ -31,37 +100,13 @@ var gradebook = {
     testScores: scores[3]
   },
   addScore: function(name, score) {
-    if (name === "Joseph"){
-      scores[0].push(score)
-      console.log(gradebook.Joseph);
-    }
-    else if (name === "Susan"){
-      scores[1].push(score)
-      console.log(gradebook.Susan);
-    }
-    else if (name === "William"){
-      scores[2].push(score)
-      console.log(gradebook.William);
-    }
-    else if (name === "Elizabeth"){
-      scores[3].push(score)
-      console.log(gradebook.Elizabeth);
-    }
+      gradebook[name].testScores.push(score)
+      console.log(gradebook[name].testScores);
   },
   getAverage: function(name) {
-     if (name === "Joseph"){
-      console.log(average(scores[0]));
-    }
-    else if (name === "Susan") {
-      console.log(average(scores[1]));
-    }
-    else if (name === "William") {
-      console.log(average(scores[2]));
-    }
-    else if (name === "Elizabeth") {
-      console.log(average(scores[3]));
-    }
+    return average(gradebook[name].testScores);
   }
+
 }
 
 function average(array) {
@@ -70,24 +115,23 @@ function average(array) {
   averageValue += array[counter];
   } // end for
   return (averageValue / array.length);
-}
+};
 
-gradebook.getAverage("Joseph");
-
-
-
-// __________________________________________
-// Refactored Solution
-
-
-
-
-
-
-
+gradebook.addScore("William", 60);
 
 // __________________________________________
 // Reflect
+// What did you learn about adding functions to objects?
+
+//   I learned that you can easily create a property that holds a function within it. You can also create functions outside of an object and use that function to return the desired result.
+
+// How did you iterate over nested arrays in JavaScript?
+
+//   By index number and using .push to change the data structure.
+
+// Were there any new methods you were able to incorporate? If so, what were they and how did they work?
+
+//   Nothing new in this challenge.
 
 
 
@@ -96,9 +140,8 @@ gradebook.getAverage("Joseph");
 
 
 
-
-// // __________________________________________
-// // Test Code:  Do not alter code below this line.
+// __________________________________________
+// Test Code:  Do not alter code below this line.
 
 
 function assert(test, message, test_number) {
