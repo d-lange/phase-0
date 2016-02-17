@@ -38,7 +38,7 @@ command: SELECT region_name FROM regions WHERE region_name LIKE '%Central%';
 
 command: SELECT regions.region_name, states.state_name FROM regions, states ORDER BY region_id ASC;
 
-![Schema](database-intro/Schema.png)
+![Schema](./database-intro/Schema.png)
 
 ### REFLECTION
 
