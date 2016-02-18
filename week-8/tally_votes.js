@@ -1,7 +1,7 @@
 // Tally Votes in JavaScript Pairing Challenge.
 
-// I worked on this challenge with:
-// This challenge took me [#] hours.
+// I worked on this challenge with: Ayaz Uddin
+// This challenge took me [2.5] hours.
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -64,6 +64,24 @@ var officers = {
 
 // Pseudocode
 
+// tally votes
+  // iterate over votes
+  // create empty arrays for each officer
+  // use FOR..IN loop: for all votes for each officer, push into the appropriate array
+  // create Counts objects for each officer
+  // use FOR loop as long as counter is less than the arrays length, increment through the array
+  // for every students vote, add 1 to the candidates total in vote count
+    // have Counts object nested array and counter variable equal Counts object with nested array and counter + 1 or 1 so that it won't be undefined.
+  // do this for each officer
+  // set voteCount[each officer] equal the appropriate Counts object variable
+
+// fill officers object with correct winners from the votes
+
+  // retrieve the max value of votes in each array
+    // push Counts objects into new array for count and name
+    // for loop to and use counter to iterate through new Counts array
+    // IF Counts array is greater than Max variable which is set to 0, store Counts array with counter to maxofficer and max index
+  // put data into officers objects properties equal countsname array by the max index
 
 // __________________________________________
 // Initial Solution
@@ -211,10 +229,17 @@ console.log(officers.treasurer = treasurerCountsNameArray[maxByIndex]);
 // __________________________________________
 // Reflection
 
+// What did you learn about iterating over nested objects in JavaScript?
 
+//   I learned how to utilize for..in loops as well as setting different variables to hold new information affected by counters and breaking down the objects to access the right elements.
 
+// Were you able to find useful methods to help you with this?
 
+//   Ruby is way easier to find methods so I wasn't really able to use that many beside .push and .length.
 
+// What concepts were solidified in the process of working through this challenge?
+
+//   Using variables to store things outside of the loop and then adding to them and retrieving the index value.
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
