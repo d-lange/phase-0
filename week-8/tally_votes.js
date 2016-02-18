@@ -45,7 +45,7 @@ var voteCount = {
 of the respective office in voteCount.  After Alex's votes have been tallied,
 voteCount would be ...
   var voteCount = {
-    president: { Bob: 1, },
+    president: { Bob: 1 },
     vicePresident: { Devin: 1 },
     secretary: { Gail: 1 },
     treasurer: { Kerry: 1 }
@@ -68,11 +68,137 @@ var officers = {
 // __________________________________________
 // Initial Solution
 
+// totalling votes for each candidate for each officer.
 
+var presidentArray = [];
+var vicePresidentArray = [];
+var secretaryArray = [];
+var treasurerArray = [];
 
+var presidentCounts = {};
+var vicePresidentCounts = {};
+var secretaryCounts = {};
+var treasurerCounts = {};
 
+for (var x in votes) {
+  presidentArray.push(votes[x]["president"]);
+}
 
+for (var x in votes) {
+  vicePresidentArray.push(votes[x]["vicePresident"]);
+}
 
+for (var x in votes) {
+  secretaryArray.push(votes[x]["secretary"]);
+}
+
+for (var x in votes) {
+  treasurerArray.push(votes[x]["treasurer"]);
+}
+
+for (var i = 0; i < presidentArray.length; i++) {
+  presidentCounts[presidentArray[i]] = presidentCounts[presidentArray[i]] + 1 || 1;
+}
+for (var i = 0; i < vicePresidentArray.length; i++) {
+  vicePresidentCounts[vicePresidentArray[i]] = vicePresidentCounts[vicePresidentArray[i]] + 1 || 1;
+}
+
+for (var i = 0; i < secretaryArray.length; i++) {
+  secretaryCounts[secretaryArray[i]] = secretaryCounts[secretaryArray[i]] + 1 || 1;
+}
+
+for (var i = 0; i < treasurerArray.length; i++) {
+  treasurerCounts[treasurerArray[i]] = treasurerCounts[treasurerArray[i]] + 1 || 1;
+}
+
+voteCount["president"] = presidentCounts;
+voteCount["vicePresident"] = vicePresidentCounts;
+voteCount["secretary"] = secretaryCounts;
+voteCount["treasurer"] = treasurerCounts;
+
+// console.log(voteCount);
+
+// getting winners
+
+// president
+
+var presidentCountsNameArray = [];
+var presidentCountsArray = [];
+for (var x in presidentCounts) {
+  presidentCountsArray.push(presidentCounts[x]);
+  presidentCountsNameArray.push(x);
+}
+
+var maxPres = 0;
+var maxByIndex = 0;
+for (var i = 0; i < presidentCountsArray.length; i++) {
+  if (presidentCountsArray[i] > maxPres) {
+      maxPres = presidentCountsArray[i];
+      maxByIndex = i;
+  }
+}
+
+console.log(officers.president = presidentCountsNameArray[maxByIndex]);
+
+// vice president
+
+var vicePresidentCountsNameArray = [];
+var vicePresidentCountsArray = [];
+for (var x in vicePresidentCounts) {
+  vicePresidentCountsArray.push(vicePresidentCounts[x]);
+  vicePresidentCountsNameArray.push(x);
+}
+
+var maxVicePres = 0;
+var maxByIndex = 0;
+for (var i = 0; i < vicePresidentCountsArray.length; i++) {
+  if (vicePresidentCountsArray[i] > maxVicePres) {
+      maxVicePres = vicePresidentCountsArray[i];
+      maxByIndex = i;
+  }
+}
+
+console.log(officers.vicePresident = vicePresidentCountsNameArray[maxByIndex]);
+
+// secretary
+
+var secretaryCountsNameArray = [];
+var secretaryCountsArray = [];
+for (var x in secretaryCounts) {
+  secretaryCountsArray.push(secretaryCounts[x]);
+  secretaryCountsNameArray.push(x);
+}
+
+var maxSec = 0;
+var maxByIndex = 0;
+for (var i = 0; i < secretaryCountsArray.length; i++) {
+  if (secretaryCountsArray[i] > maxSec) {
+      maxSec = secretaryCountsArray[i];
+      maxByIndex = i;
+  }
+}
+
+console.log(officers.secretary = secretaryCountsNameArray[maxByIndex]);
+
+// treasurer
+
+var treasurerCountsNameArray = [];
+var treasurerCountsArray = [];
+for (var x in treasurerCounts) {
+  treasurerCountsArray.push(treasurerCounts[x]);
+  treasurerCountsNameArray.push(x);
+}
+
+var maxTreas = 0;
+var maxByIndex = 0;
+for (var i = 0; i < presidentCountsArray.length; i++) {
+  if (treasurerCountsArray[i] > maxTreas) {
+      maxTreas = treasurerCountsArray[i];
+      maxByIndex = i;
+  }
+}
+
+console.log(officers.treasurer = treasurerCountsNameArray[maxByIndex]);
 
 // __________________________________________
 // Refactored Solution
